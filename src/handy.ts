@@ -126,7 +126,7 @@ export async function* normalizeMessages(
 
     previousLocalTimestamp = messageWithTimestamp.localTimestamp
 
-    console.log(messageWithTimestamp)
+    // console.log(messageWithTimestamp)
     for (const mapper of mappersForExchange) {
       if (mapper.canHandle(messageWithTimestamp.message)) {
         const mappedMessages = mapper.map(messageWithTimestamp.message, messageWithTimestamp.localTimestamp)

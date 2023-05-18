@@ -105,6 +105,7 @@ export abstract class RealTimeFeedBase implements RealTimeFeedIterable {
           if (this.decompress !== undefined) {
             message = this.decompress(message)
           }
+          console.log(message)
 
           // hack to handle huobi long numeric id for trades
           if (this._exchange.startsWith('huobi-') && message.includes('.trade.detail')) {
